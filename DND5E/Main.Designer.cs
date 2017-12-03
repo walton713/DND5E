@@ -1,6 +1,6 @@
 ﻿namespace DND5E
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
