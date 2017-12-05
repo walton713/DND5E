@@ -1,26 +1,32 @@
-﻿using TechTalk.SpecFlow;
+﻿using DND5E.Utils;
+using NUnit.Framework;
+using TechTalk.SpecFlow;
 
 namespace DND5EUnitTests
 {
     [Binding]
     public class DiceRollerSteps
     {
+        DiceRoller dr;
+        int returnValue;
+
         [Given(@"I have a Dice Roller")]
         public void GivenIHaveADiceRoller()
         {
-            ScenarioContext.Current.Pending();
+            dr = new DiceRoller();
         }
         
         [When(@"I roll a dice with (.*) sides")]
-        public void WhenIRollADiceWithSides(int p0)
+        public void WhenIRollADiceWithSides(int size)
         {
-            ScenarioContext.Current.Pending();
+            returnValue = dr.Roll(size);
         }
-        
-        [Then(@"it returns a number between (.*) and (.*)")]
-        public void ThenItReturnsANumberBetweenAnd(int p0, int p1)
+
+        [Then(@"it returns a number between one and (.*)")]
+        public void ThenItReturnsANumberBetweenOneAnd(int size)
         {
-            ScenarioContext.Current.Pending();
+            Assert.That(returnValue, Is.GreaterThanOrEqualTo(1));
+            Assert.That(returnValue, Is.LessThanOrEqualTo(size));
         }
     }
 }

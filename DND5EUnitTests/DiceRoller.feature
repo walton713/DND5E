@@ -6,8 +6,9 @@
 Scenario Outline: ReturnNumberBetweenOneAndSize
 	Given I have a Dice Roller
 	When I roll a dice with <size> sides
-	Then it returns a number between 1 and <size>
+	Then it returns a number between one and <size>
 
 	Examples: 
 	| size |
+	| 20   |
 	| 4    |

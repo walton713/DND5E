@@ -65,6 +65,7 @@ namespace DND5EUnitTests
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("ReturnNumberBetweenOneAndSize")]
+        [NUnit.Framework.TestCaseAttribute("20", null)]
         [NUnit.Framework.TestCaseAttribute("4", null)]
         public virtual void ReturnNumberBetweenOneAndSize(string size, string[] exampleTags)
         {
@@ -76,7 +77,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.When(string.Format("I roll a dice with {0} sides", size), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.Then(string.Format("it returns a number between 1 and {0}", size), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("it returns a number between one and {0}", size), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
