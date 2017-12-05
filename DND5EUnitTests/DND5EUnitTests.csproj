@@ -65,9 +65,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DiceRollerSteps.cs" />
+    <Compile Include="Utils\DiceRollerSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DiceRoller.feature.cs">
+    <Compile Include="Utils\DiceRoller.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DiceRoller.feature</DependentUpon>
@@ -76,7 +76,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="DiceRoller.feature">
+    <None Include="Utils\DiceRoller.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DiceRoller.feature.cs</LastGenOutput>
     </None>
