@@ -25,8 +25,7 @@ namespace DND5EUnitTests
         [Then(@"it returns a number between one and (.*)")]
         public void ThenItReturnsANumberBetweenOneAnd(int size)
         {
-            Assert.That(returnValue, Is.GreaterThanOrEqualTo(1));
-            Assert.That(returnValue, Is.LessThanOrEqualTo(size));
+            Assert.That(returnValue, Is.InRange(1, size));
         }
     }
 }
