@@ -27,5 +27,17 @@ namespace DND5EUnitTests
         {
             Assert.That(returnValue, Is.InRange(1, size));
         }
+
+        [When(@"I roll (.*) dice with (.*) sides")]
+        public void WhenIRollDiceWithSides(int num, int size)
+        {
+            returnValue = dr.Roll(num, size);
+        }
+
+        [Then(@"it returns a number between (.*) and (.*)")]
+        public void ThenItReturnsANumberBetweenAnd(int num, int max)
+        {
+            Assert.That(returnValue, Is.InRange(num, max));
+        }
     }
 }

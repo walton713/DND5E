@@ -12,3 +12,13 @@ Scenario Outline: ReturnNumberBetweenOneAndSize
 	| size |
 	| 20   |
 	| 4    |
+
+Scenario Outline: ReturnNumberBetweenNumberOfDiceAndSizeTimeNumber
+	Given I have a Dice Roller
+	When I roll <num> dice with <size> sides
+	Then it returns a number between <num> and <max>
+
+	Examples: 
+	| num | size | max |
+	| 2   | 6    | 12  |
+	| 3   | 8    | 24  |

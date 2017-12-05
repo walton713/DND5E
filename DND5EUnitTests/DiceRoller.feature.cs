@@ -81,6 +81,25 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("ReturnNumberBetweenNumberOfDiceAndSizeTimeNumber")]
+        [NUnit.Framework.TestCaseAttribute("2", "6", "12", null)]
+        [NUnit.Framework.TestCaseAttribute("3", "8", "24", null)]
+        public virtual void ReturnNumberBetweenNumberOfDiceAndSizeTimeNumber(string num, string size, string max, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ReturnNumberBetweenNumberOfDiceAndSizeTimeNumber", exampleTags);
+#line 16
+this.ScenarioSetup(scenarioInfo);
+#line 17
+ testRunner.Given("I have a Dice Roller", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 18
+ testRunner.When(string.Format("I roll {0} dice with {1} sides", num, size), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+ testRunner.Then(string.Format("it returns a number between {0} and {1}", num, max), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
