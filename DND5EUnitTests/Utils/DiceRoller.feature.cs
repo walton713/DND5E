@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace DND5EUnitTests
+namespace DND5EUnitTests.Utils
 {
     using TechTalk.SpecFlow;
     
