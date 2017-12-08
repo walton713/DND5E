@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DND5E
@@ -15,6 +8,12 @@ namespace DND5E
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void characterCreateBtn_Click(object sender, EventArgs e)
+        {
+            Form characterCreationForm = new CharacterCreation();
+            characterCreationForm.Show();
         }
     }
 }
