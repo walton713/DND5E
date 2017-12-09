@@ -31,14 +31,6 @@ namespace DND5EUITests
         }
 
         [Test]
-        public void testWindowClose()
-        {
-            window.Close();
-
-            Assert.That(window.IsClosed, Is.True);
-        }
-
-        [Test]
         public void testCharacterCreationButtonOpensCharacterCreationWindow()
         {
             Button button = window.Get<Button>("characterCreateBtn");
