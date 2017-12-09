@@ -10,20 +10,41 @@ namespace DND5EUITests
     [TestFixture]
     public class MainWindowTests
     {
+        string applicationDirectory;
+        string applicationPath;
+        Application app;
+        Window window;
+
+        [SetUp]
+        public void SetUp()
+        {
+            applicationDirectory = TestContext.CurrentContext.TestDirectory;
+            applicationPath = Path.Combine(applicationDirectory, "DND5E.exe");
+            app = Application.Launch(applicationPath);
+            window = app.GetWindow("DND5E", InitializeOption.NoCache);
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            if (app != null) app.Kill();
+        }
+
+        [Test]
+        public void testWindowClose()
+        {
+            window.Close();
+
+            Assert.That(window.IsClosed, Is.True);
+        }
+
         [Test]
         public void testCharacterCreationButtonOpensCharacterCreationWindow()
         {
-            var applicationDirectory = TestContext.CurrentContext.TestDirectory;
-            var applicationPath = Path.Combine(applicationDirectory, "DND5E.exe");
-            Application app = Application.Launch(applicationPath);
-            Window window = app.GetWindow("DND5E", InitializeOption.NoCache);
-
             Button button = window.Get<Button>("characterCreateBtn");
             button.Click();
 
             Assert.That(app.GetWindow("Character Creation", InitializeOption.NoCache), Is.Not.Null);
-
-            app.Close();
         }
     }
 }
