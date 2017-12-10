@@ -36,7 +36,7 @@ namespace DND5EUITests
             Button button = window.Get<Button>("characterCreateBtn");
             button.Click();
 
-            Assert.That(app.GetWindow("Character Creation", InitializeOption.NoCache), Is.Not.Null);
+            Assert.That(app.GetWindow("Character Creation", InitializeOption.NoCache).IsCurrentlyActive, Is.True);
         }
     }
 }

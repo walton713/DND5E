@@ -39,5 +39,11 @@ namespace DND5EUnitTests
         {
             Assert.That(returnValue, Is.InRange(num, max));
         }
+
+        [When(@"I roll ability scores")]
+        public void WhenIRollAbilityScores()
+        {
+            returnValue = dr.RollAbilityScore();
+        }
     }
 }

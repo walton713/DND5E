@@ -20,5 +20,12 @@ namespace DND5E.Utils
             }
             return value;
         }
+
+        public int RollAbilityScore()
+        {
+            int[] rolls = new int[] { Roll(6, 1), Roll(6, 1), Roll(6, 1), Roll(6, 1) };
+            Array.Sort(rolls);
+            return rolls[1] + rolls[2] + rolls[3];
+        }
     }
 }

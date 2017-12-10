@@ -22,3 +22,8 @@ Scenario Outline: ReturnNumberBetweenNumberOfDiceAndSizeTimeNumber
 	| num | size | max |
 	| 2   | 6    | 12  |
 	| 3   | 8    | 24  |
+
+Scenario: RollAbilityScore
+	Given I have a Dice Roller
+	When I roll ability scores
+	Then it returns a number between 3 and 18
