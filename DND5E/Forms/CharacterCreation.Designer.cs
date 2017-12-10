@@ -33,6 +33,7 @@
             this.abilityScoreTextTwo = new System.Windows.Forms.TextBox();
             this.abilityScoreTextThree = new System.Windows.Forms.TextBox();
             this.abilityScoreTextFour = new System.Windows.Forms.TextBox();
+            this.abilityScoreTextFive = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // abilityScoresBtn
@@ -83,12 +84,22 @@
             this.abilityScoreTextFour.Size = new System.Drawing.Size(45, 20);
             this.abilityScoreTextFour.TabIndex = 5;
             // 
+            // abilityScoreTextFive
+            // 
+            this.abilityScoreTextFive.BackColor = System.Drawing.SystemColors.Window;
+            this.abilityScoreTextFive.Enabled = false;
+            this.abilityScoreTextFive.Location = new System.Drawing.Point(32, 194);
+            this.abilityScoreTextFive.Name = "abilityScoreTextFive";
+            this.abilityScoreTextFive.Size = new System.Drawing.Size(45, 20);
+            this.abilityScoreTextFive.TabIndex = 6;
+            // 
             // CharacterCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(1313, 771);
+            this.Controls.Add(this.abilityScoreTextFive);
             this.Controls.Add(this.abilityScoreTextFour);
             this.Controls.Add(this.abilityScoreTextThree);
             this.Controls.Add(this.abilityScoreTextTwo);
@@ -108,5 +119,6 @@
         private System.Windows.Forms.TextBox abilityScoreTextTwo;
         private System.Windows.Forms.TextBox abilityScoreTextThree;
         private System.Windows.Forms.TextBox abilityScoreTextFour;
+        private System.Windows.Forms.TextBox abilityScoreTextFive;
     }
 }
