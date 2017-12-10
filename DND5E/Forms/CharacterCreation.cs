@@ -15,7 +15,8 @@ namespace DND5E
 
         private void abilityScoresBtn_Click(object sender, System.EventArgs e)
         {
-            abilityScoreText.Text = dr.RollAbilityScore().ToString();
+            abilityScoreTextOne.Text = dr.RollAbilityScore().ToString();
+            abilityScoreTextTwo.Text = dr.RollAbilityScore().ToString();
         }
     }
 }

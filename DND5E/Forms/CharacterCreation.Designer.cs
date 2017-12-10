@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.abilityScoresBtn = new System.Windows.Forms.Button();
-            this.abilityScoreText = new System.Windows.Forms.TextBox();
+            this.abilityScoreTextOne = new System.Windows.Forms.TextBox();
+            this.abilityScoreTextTwo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // abilityScoresBtn
@@ -44,14 +45,23 @@
             this.abilityScoresBtn.UseVisualStyleBackColor = false;
             this.abilityScoresBtn.Click += new System.EventHandler(this.abilityScoresBtn_Click);
             // 
-            // abilityScoreText
+            // abilityScoreTextOne
             // 
-            this.abilityScoreText.BackColor = System.Drawing.SystemColors.Window;
-            this.abilityScoreText.Enabled = false;
-            this.abilityScoreText.Location = new System.Drawing.Point(32, 90);
-            this.abilityScoreText.Name = "abilityScoreText";
-            this.abilityScoreText.Size = new System.Drawing.Size(112, 20);
-            this.abilityScoreText.TabIndex = 2;
+            this.abilityScoreTextOne.BackColor = System.Drawing.SystemColors.Window;
+            this.abilityScoreTextOne.Enabled = false;
+            this.abilityScoreTextOne.Location = new System.Drawing.Point(32, 90);
+            this.abilityScoreTextOne.Name = "abilityScoreTextOne";
+            this.abilityScoreTextOne.Size = new System.Drawing.Size(45, 20);
+            this.abilityScoreTextOne.TabIndex = 2;
+            // 
+            // abilityScoreTextTwo
+            // 
+            this.abilityScoreTextTwo.BackColor = System.Drawing.SystemColors.Window;
+            this.abilityScoreTextTwo.Enabled = false;
+            this.abilityScoreTextTwo.Location = new System.Drawing.Point(32, 116);
+            this.abilityScoreTextTwo.Name = "abilityScoreTextTwo";
+            this.abilityScoreTextTwo.Size = new System.Drawing.Size(45, 20);
+            this.abilityScoreTextTwo.TabIndex = 3;
             // 
             // CharacterCreation
             // 
@@ -59,7 +69,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(1313, 771);
-            this.Controls.Add(this.abilityScoreText);
+            this.Controls.Add(this.abilityScoreTextTwo);
+            this.Controls.Add(this.abilityScoreTextOne);
             this.Controls.Add(this.abilityScoresBtn);
             this.Name = "CharacterCreation";
             this.Text = "Character Creation";
@@ -71,6 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Button abilityScoresBtn;
-        private System.Windows.Forms.TextBox abilityScoreText;
+        private System.Windows.Forms.TextBox abilityScoreTextOne;
+        private System.Windows.Forms.TextBox abilityScoreTextTwo;
     }
 }

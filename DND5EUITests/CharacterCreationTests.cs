@@ -18,6 +18,8 @@ namespace DND5EUITests
         Window mainWindow;
         Window characterCreationWindow;
         Button characterCreateBtn;
+        Button abilityScoresBtn;
+        int abilityLabelValue = 0;
 
         [SetUp]
         public void SetUp()
@@ -38,16 +40,41 @@ namespace DND5EUITests
         }
 
         [Test]
-        public void testGenerateAbilityScoresButtonFillsAbilityScoreLabel()
+        public void testGenerateAbilityScoresButtonFillsFirstAbilityScoreLabel()
         {
-            Button abilityScoresBtn = characterCreationWindow.Get<Button>("abilityScoresBtn");
-            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreText"));
-            abilityScoresBtn.Click();
+            abilityScoreSetUp();
+            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextOne"));
 
-            int abilityLabelValue = 0;
-            Int32.TryParse(abilityScoresLbl.Text, out abilityLabelValue);
+            getTextValue(abilityScoresLbl.Text);
 
             Assert.That(abilityLabelValue, Is.InRange(3, 18));
         }
+
+        [Test]
+        public void testGenerateAbilityScoresButtonFillsSecondAbilityScoreLabel()
+        {
+            abilityScoreSetUp();
+            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextTwo"));
+            getTextValue(abilityScoresLbl.Text);
+
+            Assert.That(abilityLabelValue, Is.InRange(3, 18));
+        }
+
+        public void abilityScoreSetUp()
+        {
+            abilityScoresBtn = characterCreationWindow.Get<Button>("abilityScoresBtn");
+            abilityScoresBtn.Click();
+        }
+
+        public void getTextValue(string text)
+        {
+            Int32.TryParse(text, out abilityLabelValue);
+        }
+
+        //[Test]
+        //public void testGenerateAbilityScoresButtonFillsThirdAbilityScoreLabel()
+        //{
+
+        //}
     }
 }
