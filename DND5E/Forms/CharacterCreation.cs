@@ -20,6 +20,7 @@ namespace DND5E
             abilityScoreTextThree.Text = dr.RollAbilityScore().ToString();
             abilityScoreTextFour.Text = dr.RollAbilityScore().ToString();
             abilityScoreTextFive.Text = dr.RollAbilityScore().ToString();
+            abilityScoreTextSix.Text = dr.RollAbilityScore().ToString();
         }
     }
 }

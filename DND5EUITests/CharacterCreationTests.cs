@@ -100,5 +100,15 @@ namespace DND5EUITests
 
             Assert.That(abilityLabelValue, Is.InRange(3, 18));
         }
+
+        [Test]
+        public void TestGenerateAbilityScoresButtonFillsSixthAbilityScoreLabel()
+        {
+            abilityScoreSetUp();
+            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextSix"));
+            getTextValue(abilityScoresLbl.Text);
+
+            Assert.That(abilityLabelValue, Is.InRange(3, 18));
+        }
     }
 }
