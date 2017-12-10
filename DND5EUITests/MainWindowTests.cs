@@ -31,7 +31,7 @@ namespace DND5EUITests
         }
 
         [Test]
-        public void testCharacterCreationButtonOpensCharacterCreationWindow()
+        public void TestCharacterCreationButtonOpensCharacterCreationWindow()
         {
             Button button = window.Get<Button>("characterCreateBtn");
             button.Click();

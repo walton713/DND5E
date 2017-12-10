@@ -17,6 +17,8 @@ namespace DND5E
         {
             abilityScoreTextOne.Text = dr.RollAbilityScore().ToString();
             abilityScoreTextTwo.Text = dr.RollAbilityScore().ToString();
+            abilityScoreTextThree.Text = dr.RollAbilityScore().ToString();
+            abilityScoreTextFour.Text = dr.RollAbilityScore().ToString();
         }
     }
 }

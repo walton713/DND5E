@@ -39,27 +39,6 @@ namespace DND5EUITests
             if (app != null) app.Kill();
         }
 
-        [Test]
-        public void testGenerateAbilityScoresButtonFillsFirstAbilityScoreLabel()
-        {
-            abilityScoreSetUp();
-            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextOne"));
-
-            getTextValue(abilityScoresLbl.Text);
-
-            Assert.That(abilityLabelValue, Is.InRange(3, 18));
-        }
-
-        [Test]
-        public void testGenerateAbilityScoresButtonFillsSecondAbilityScoreLabel()
-        {
-            abilityScoreSetUp();
-            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextTwo"));
-            getTextValue(abilityScoresLbl.Text);
-
-            Assert.That(abilityLabelValue, Is.InRange(3, 18));
-        }
-
         public void abilityScoreSetUp()
         {
             abilityScoresBtn = characterCreationWindow.Get<Button>("abilityScoresBtn");
@@ -71,10 +50,45 @@ namespace DND5EUITests
             Int32.TryParse(text, out abilityLabelValue);
         }
 
-        //[Test]
-        //public void testGenerateAbilityScoresButtonFillsThirdAbilityScoreLabel()
-        //{
+        [Test]
+        public void TestGenerateAbilityScoresButtonFillsFirstAbilityScoreLabel()
+        {
+            abilityScoreSetUp();
+            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextOne"));
 
-        //}
+            getTextValue(abilityScoresLbl.Text);
+
+            Assert.That(abilityLabelValue, Is.InRange(3, 18));
+        }
+
+        [Test]
+        public void TestGenerateAbilityScoresButtonFillsSecondAbilityScoreLabel()
+        {
+            abilityScoreSetUp();
+            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextTwo"));
+            getTextValue(abilityScoresLbl.Text);
+
+            Assert.That(abilityLabelValue, Is.InRange(3, 18));
+        }
+
+        [Test]
+        public void TestGenerateAbilityScoresButtonFillsThirdAbilityScoreLabel()
+        {
+            abilityScoreSetUp();
+            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextThree"));
+            getTextValue(abilityScoresLbl.Text);
+
+            Assert.That(abilityLabelValue, Is.InRange(3, 18));
+        }
+
+        [Test]
+        public void TestGenerateAbilityScoresButtonFillsFourthAbilityScoreLabel()
+        {
+            abilityScoreSetUp();
+            TextBox abilityScoresLbl = characterCreationWindow.Get<TextBox>(SearchCriteria.ByAutomationId("abilityScoreTextFour"));
+            getTextValue(abilityScoresLbl.Text);
+
+            Assert.That(abilityLabelValue, Is.InRange(3, 18));
+        }
     }
 }
